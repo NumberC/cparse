@@ -155,7 +155,7 @@ packToken NumeralOperation(const packToken& left, const packToken& right, evalua
     return left_d / right_d;
   } else if (op == "<<") {
     return left_i << right_i;
-  } else if (op == "**") {
+  } else if (op == "**" || op == "^") {
     return pow(left_d, right_d);
   } else if (op == ">>") {
     return left_i >> right_i;
@@ -334,7 +334,7 @@ struct Startup {
     // http://en.cppreference.com/w/cpp/language/operator_precedence
     OppMap_t& opp = calculator::Default().opPrecedence;
     opp.add("[]", 2); opp.add("()", 2); opp.add(".", 2);
-    opp.add("**", 3);
+    opp.add("**", 3); opp.add("^", 3);
     opp.add("*",  5); opp.add("/", 5); opp.add("%", 5);
     opp.add("+",  6); opp.add("-", 6);
     opp.add("<<", 7); opp.add(">>", 7);
