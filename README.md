@@ -1,3 +1,4 @@
+![CParser](logo-cparse.png)
 # CParser • [![Build Status][travis-image]][travis] [![License][license-image]][license]
 
 [travis-image]: https://travis-ci.org/cparse/cparse.png?branch=master
